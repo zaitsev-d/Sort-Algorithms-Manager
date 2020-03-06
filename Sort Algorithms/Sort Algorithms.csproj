@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4FA660A4-DB7A-4210-9358-791182763EC5}</ProjectGuid>
+    <ProjectGuid>{2AE3C43F-C480-483B-9466-B9D42960AB77}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SortAlgorithms</RootNamespace>
-    <AssemblyName>SortAlgorithms</AssemblyName>
+    <RootNamespace>Sort_Algorithms</RootNamespace>
+    <AssemblyName>Sort Algorithms</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Algorithm;
 
 namespace SortAlgorithms
@@ -14,7 +11,7 @@ namespace SortAlgorithms
             BubbleSort<int> bubbleSort = new BubbleSort<int>();
 
             var random = new Random();
-            for(int i = 0; i < 10; i++)
+            for (int i = 0; i < 10; i++)
             {
                 bubbleSort.Items.Add(random.Next(0, 100));
             }
