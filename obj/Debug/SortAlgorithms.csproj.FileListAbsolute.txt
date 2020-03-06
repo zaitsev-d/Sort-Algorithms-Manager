@@ -1,0 +1,6 @@
+D:\Workspace\GitHub\Sort-Algorithms-Manager\bin\Debug\SortAlgorithms.exe.config
+D:\Workspace\GitHub\Sort-Algorithms-Manager\bin\Debug\SortAlgorithms.exe
+D:\Workspace\GitHub\Sort-Algorithms-Manager\bin\Debug\SortAlgorithms.pdb
+D:\Workspace\GitHub\Sort-Algorithms-Manager\obj\Debug\SortAlgorithms.csprojAssemblyReference.cache
+D:\Workspace\GitHub\Sort-Algorithms-Manager\obj\Debug\SortAlgorithms.exe
+D:\Workspace\GitHub\Sort-Algorithms-Manager\obj\Debug\SortAlgorithms.pdb
