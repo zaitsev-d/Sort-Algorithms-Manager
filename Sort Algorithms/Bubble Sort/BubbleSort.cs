@@ -8,6 +8,7 @@ namespace Algorithm
     {
         public override void Sort()
         {
+            SwapCount = default;
             var count = Items.Count;
 
             for (int i = 0; i < count; i++)
@@ -20,6 +21,7 @@ namespace Algorithm
                     if (a.CompareTo(b) == 1)
                     {
                         Swap(j, j + 1);
+                        ComparisonCount++;
                     }
                 }
             }
