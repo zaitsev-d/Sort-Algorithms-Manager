@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Algorithm
+namespace SortAlgorithm
 {
-    public class Algorithm<T> where T : IComparable
+    public class BaseAlgorithm<T> where T : IComparable
     {
         public int SwapCount { get; protected set; } = default;
         public int ComparisonCount { get; protected set; } = default;

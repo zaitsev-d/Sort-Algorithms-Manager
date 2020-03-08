@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Algorithm
+namespace SortAlgorithm
 {
-    class CocktailSort<T> : Algorithm<T>
+    class CocktailSort<T> : BaseAlgorithm<T>
         where T : IComparable
     {
         public override void Sort()

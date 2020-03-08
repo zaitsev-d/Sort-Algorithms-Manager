@@ -46,6 +46,7 @@
     <Compile Include="Base Algorithm\Algorithm.cs" />
     <Compile Include="Bubble Sort\BubbleSort.cs" />
     <Compile Include="Cocktail Sort\CocktailSort.cs" />
+    <Compile Include="Insertion Sort\InsertionSort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

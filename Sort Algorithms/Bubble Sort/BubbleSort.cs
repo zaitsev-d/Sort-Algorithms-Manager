@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Algorithm
+namespace SortAlgorithm
 {
-    class BubbleSort<T> : Algorithm<T>
+    class BubbleSort<T> : BaseAlgorithm<T>
         where T : IComparable
     {
         public override void Sort()
