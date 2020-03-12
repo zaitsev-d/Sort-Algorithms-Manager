@@ -18,10 +18,9 @@ namespace SortAlgorithm
                     var a = Items[j];
                     var b = Items[j + 1];
 
-                    if (a.CompareTo(b) == 1)
+                    if (Compare(a, b) == 1)
                     {
                         Swap(j, j + 1);
-                        ComparisonCount++;
                     }
                 }
             }

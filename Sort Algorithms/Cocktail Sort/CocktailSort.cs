@@ -19,10 +19,9 @@ namespace SortAlgorithm
 
                 for(int i = left; i < right; i++)
                 {
-                    if(Items[i].CompareTo(Items[i + 1]) == 1)
+                    if(Compare(Items[i], Items[i + 1]) == 1)
                     {
                         Swap(i, i + 1);
-                        ComparisonCount++;
                     }
                 }
                 right--;
@@ -34,10 +33,9 @@ namespace SortAlgorithm
 
                 for (int j = right; j > left; j--)
                 {
-                    if(Items[j].CompareTo(Items[j - 1]) == -1)
+                    if(Compare(Items[j], Items[j - 1]) == -1)
                     {
                         Swap(j, j - 1);
-                        ComparisonCount++;
                     }
                 }
                 left++;

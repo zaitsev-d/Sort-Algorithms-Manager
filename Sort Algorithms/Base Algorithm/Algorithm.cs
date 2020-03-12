@@ -8,17 +8,29 @@ namespace SortAlgorithm
         public int SwapCount { get; protected set; } = default;
         public int ComparisonCount { get; protected set; } = default;
 
+        public event EventHandler<Tuple<T, T>> CompareEvent;
+        public event EventHandler<Tuple<T, T>> SwapEvent;
+
         public List<T> Items { get; set; } = new List<T>();
         public void Swap(int first, int second)
         {
             if (first < Items.Count && second < Items.Count)
             {
+                SwapEvent?.Invoke(this, new Tuple<T, T>(Items[first], Items[second]));
+                SwapCount++;
+
                 var temp = Items[first];
                 Items[first] = Items[second];
                 Items[second] = temp;
-
-                SwapCount++;
             }
+        }
+
+        protected int Compare(T a, T b)
+        {
+            CompareEvent?.Invoke(this, new Tuple<T, T>(a, b));
+            ComparisonCount++;
+
+            return a.CompareTo(b);
         }
 
         public virtual void Sort()
