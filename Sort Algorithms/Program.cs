@@ -11,6 +11,7 @@ namespace SortAlgorithms
             BubbleSort<int> bubbleSort = new BubbleSort<int>();
             CocktailSort<int> cocktailSort = new CocktailSort<int>();
             InsertionSort<int> insertionSort = new InsertionSort<int>();
+            SelectionSort<int> selectionSort = new SelectionSort<int>();
             ShellSort<int> shellSort = new ShellSort<int>();
 
             var random = new Random();
@@ -19,6 +20,7 @@ namespace SortAlgorithms
                 bubbleSort.Items.Add(random.Next(0, 100));
                 cocktailSort.Items.Add(random.Next(0, 100));
                 insertionSort.Items.Add(random.Next(0, 100));
+                selectionSort.Items.Add(random.Next(0, 100));
                 shellSort.Items.Add(random.Next(0, 100));
             }
 
@@ -77,6 +79,25 @@ namespace SortAlgorithms
             Console.WriteLine("\n");
             Console.WriteLine($"Swap Count: {insertionSort.SwapCount}.");
             Console.WriteLine($"Comparison Count: {insertionSort.ComparisonCount}.");
+            Console.WriteLine("--------------------------\n");
+
+            Console.WriteLine("\n--------------------------");
+            Console.WriteLine("Array: ");
+            for (int i = 0; i < selectionSort.Items.Count; i++)
+            {
+                Console.Write(" " + selectionSort.Items[i]);
+            }
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Selection Sort: ");
+            selectionSort.Sort();
+            for (int i = 0; i < selectionSort.Items.Count; i++)
+            {
+                Console.Write(" " + selectionSort.Items[i]);
+            }
+            Console.WriteLine("\n");
+            Console.WriteLine($"Swap Count: {selectionSort.SwapCount}.");
+            Console.WriteLine($"Comparison Count: {selectionSort.ComparisonCount}.");
             Console.WriteLine("--------------------------\n");
 
             Console.WriteLine("\n--------------------------");
