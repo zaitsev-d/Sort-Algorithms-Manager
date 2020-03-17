@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace SortAlgorithm
 {
@@ -23,6 +24,18 @@ namespace SortAlgorithm
                 Items[first] = Items[second];
                 Items[second] = temp;
             }
+        }
+
+        public TimeSpan Timer()
+        {
+            var timer = new Stopwatch();
+            SwapCount = default;
+
+            timer.Start();
+            Sort();
+            timer.Stop();
+
+            return timer.Elapsed;
         }
 
         protected int Compare(T a, T b)
