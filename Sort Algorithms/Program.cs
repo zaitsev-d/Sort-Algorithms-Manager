@@ -15,6 +15,8 @@ namespace SortAlgorithms
             ShellSort<int> shellSort = new ShellSort<int>();
             StupidSort<int> stupidSort = new StupidSort<int>();
             GnomeSort<int> gnomeSort = new GnomeSort<int>();
+            LSDRadixSort<int> lSDRadixSort = new LSDRadixSort<int>();
+            MSDRadixSort<int> mSDRadixSort = new MSDRadixSort<int>();
 
             var random = new Random();
             for (int i = 0; i < 10; i++)
@@ -26,6 +28,8 @@ namespace SortAlgorithms
                 shellSort.Items.Add(random.Next(0, 100));
                 stupidSort.Items.Add(random.Next(0, 100));
                 gnomeSort.Items.Add(random.Next(0, 100));
+                lSDRadixSort.Items.Add(random.Next(0, 100));
+                mSDRadixSort.Items.Add(random.Next(0, 100));
             }
 
             Console.WriteLine("\n--------------------------");
@@ -166,6 +170,46 @@ namespace SortAlgorithms
             Console.WriteLine($"Time: {gnomeSortTime.TotalMilliseconds}.");
             Console.WriteLine($"Swap Count: {gnomeSort.SwapCount}.");
             Console.WriteLine($"Comparison Count: {gnomeSort.ComparisonCount}.");
+            Console.WriteLine("--------------------------\n");
+
+            Console.WriteLine("\n--------------------------");
+            Console.WriteLine("Array: ");
+            for (int i = 0; i < lSDRadixSort.Items.Count; i++)
+            {
+                Console.Write(" " + lSDRadixSort.Items[i]);
+            }
+            Console.WriteLine("\n");
+
+            Console.WriteLine("LSD Radix Sort: ");
+            var lSDRadixSortTime = lSDRadixSort.Timer();
+            for (int i = 0; i < lSDRadixSort.Items.Count; i++)
+            {
+                Console.Write(" " + lSDRadixSort.Items[i]);
+            }
+            Console.WriteLine("\n");
+            Console.WriteLine($"Time: {lSDRadixSortTime.TotalMilliseconds}.");
+            Console.WriteLine($"Swap Count: {lSDRadixSort.SwapCount}.");
+            Console.WriteLine($"Comparison Count: {lSDRadixSort.ComparisonCount}.");
+            Console.WriteLine("--------------------------\n");
+
+            Console.WriteLine("\n--------------------------");
+            Console.WriteLine("Array: ");
+            for (int i = 0; i < mSDRadixSort.Items.Count; i++)
+            {
+                Console.Write(" " + lSDRadixSort.Items[i]);
+            }
+            Console.WriteLine("\n");
+
+            Console.WriteLine("MSD Radix Sort: ");
+            var mSDRadixSortTime = mSDRadixSort.Timer();
+            for (int i = 0; i < mSDRadixSort.Items.Count; i++)
+            {
+                Console.Write(" " + mSDRadixSort.Items[i]);
+            }
+            Console.WriteLine("\n");
+            Console.WriteLine($"Time: {mSDRadixSortTime.TotalMilliseconds}.");
+            Console.WriteLine($"Swap Count: {mSDRadixSort.SwapCount}.");
+            Console.WriteLine($"Comparison Count: {mSDRadixSort.ComparisonCount}.");
             Console.WriteLine("--------------------------\n");
 
             Console.ReadKey();

@@ -43,16 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base Algorithm\Algorithm.cs" />
+    <Compile Include="Base Algorithm\BaseAlgorithm.cs" />
     <Compile Include="Bubble Sort\BubbleSort.cs" />
     <Compile Include="Cocktail Sort\CocktailSort.cs" />
     <Compile Include="Gnome Sort\GnomeSort.cs" />
     <Compile Include="Insertion Sort\InsertionSort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Radix Sort\LSDRadixSort.cs" />
+    <Compile Include="Radix Sort\MSDRadixSort.cs" />
     <Compile Include="Selection Sort\SelectionSort.cs" />
     <Compile Include="Shell Sort\ShellSort.cs" />
-    <Compile Include="StupidSort\StupidSort.cs" />
+    <Compile Include="Stupid Sort\StupidSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
