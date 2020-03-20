@@ -17,6 +17,8 @@ namespace SortAlgorithms
             GnomeSort<int> gnomeSort = new GnomeSort<int>();
             LSDRadixSort<int> lSDRadixSort = new LSDRadixSort<int>();
             MSDRadixSort<int> mSDRadixSort = new MSDRadixSort<int>();
+            MergeSort<int> mergeSort = new MergeSort<int>();
+            QuickSort<int> quickSort = new QuickSort<int>();
 
             var random = new Random();
             for (int i = 0; i < 10; i++)
@@ -30,6 +32,8 @@ namespace SortAlgorithms
                 gnomeSort.Items.Add(random.Next(0, 100));
                 lSDRadixSort.Items.Add(random.Next(0, 100));
                 mSDRadixSort.Items.Add(random.Next(0, 100));
+                mergeSort.Items.Add(random.Next(0, 100));
+                quickSort.Items.Add(random.Next(0, 100));
             }
 
             Console.WriteLine("\n--------------------------");
@@ -210,6 +214,46 @@ namespace SortAlgorithms
             Console.WriteLine($"Time: {mSDRadixSortTime.TotalMilliseconds}.");
             Console.WriteLine($"Swap Count: {mSDRadixSort.SwapCount}.");
             Console.WriteLine($"Comparison Count: {mSDRadixSort.ComparisonCount}.");
+            Console.WriteLine("--------------------------\n");
+
+            Console.WriteLine("\n--------------------------");
+            Console.WriteLine("Array: ");
+            for (int i = 0; i < mergeSort.Items.Count; i++)
+            {
+                Console.Write(" " + mergeSort.Items[i]);
+            }
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Merge Sort: ");
+            var mergeSortTime = mergeSort.Timer();
+            for (int i = 0; i < mergeSort.Items.Count; i++)
+            {
+                Console.Write(" " + mergeSort.Items[i]);
+            }
+            Console.WriteLine("\n");
+            Console.WriteLine($"Time: {mergeSortTime.TotalMilliseconds}.");
+            Console.WriteLine($"Swap Count: {mergeSort.SwapCount}.");
+            Console.WriteLine($"Comparison Count: {mergeSort.ComparisonCount}.");
+            Console.WriteLine("--------------------------\n");
+
+            Console.WriteLine("\n--------------------------");
+            Console.WriteLine("Array: ");
+            for (int i = 0; i < quickSort.Items.Count; i++)
+            {
+                Console.Write(" " + quickSort.Items[i]);
+            }
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Quick Sort: ");
+            var quickSortTime = quickSort.Timer();
+            for (int i = 0; i < quickSort.Items.Count; i++)
+            {
+                Console.Write(" " + quickSort.Items[i]);
+            }
+            Console.WriteLine("\n");
+            Console.WriteLine($"Time: {quickSortTime.TotalMilliseconds}.");
+            Console.WriteLine($"Swap Count: {quickSort.SwapCount}.");
+            Console.WriteLine($"Comparison Count: {quickSort.ComparisonCount}.");
             Console.WriteLine("--------------------------\n");
 
             Console.ReadKey();

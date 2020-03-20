@@ -48,8 +48,10 @@
     <Compile Include="Cocktail Sort\CocktailSort.cs" />
     <Compile Include="Gnome Sort\GnomeSort.cs" />
     <Compile Include="Insertion Sort\InsertionSort.cs" />
+    <Compile Include="Merge Sort\MergeSort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quick Sort\QuickSort.cs" />
     <Compile Include="Radix Sort\LSDRadixSort.cs" />
     <Compile Include="Radix Sort\MSDRadixSort.cs" />
     <Compile Include="Selection Sort\SelectionSort.cs" />
